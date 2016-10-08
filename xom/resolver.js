@@ -1,9 +1,9 @@
-exports = module.exports = function(db) {
+exports = module.exports = function(zones) {
   var Resolver = require('../lib/resolver');
   
-  return new Resolver(db);
+  return new Resolver(zones);
 }
 
-exports['@singleton'] = true;
 exports['@implements'] = 'http://i.bixbyjs.org/ns/Resolver';
-exports['@require'] = [ './db' ];
+exports['@singleton'] = true;
+exports['@require'] = [ './zones' ];

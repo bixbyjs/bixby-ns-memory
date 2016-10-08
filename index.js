@@ -1,17 +1,13 @@
-exports = module.exports = function ns_memory(id) {
-  var map = {
-    'db': './xom/db',
-    'resolver': './xom/resolver',
-    'updater': './xom/updater',
-  };
-  
-  var mid = map[id];
-  if (mid) {
-    return require(mid);
-  }
+exports = module.exports = {
+  'resolver': require('./xom/resolver'),
+  'updater': require('./xom/updater'),
 };
 
-exports.used = function(container) {
-  container.add('resolver');
-  container.add('updater');
+exports.load = function(id) {
+  try {
+    return require('./xom/' + id);
+  } catch (ex) {
+    if (ex.code == 'MODULE_NOT_FOUND') { return; }
+    throw ex;
+  }
 };

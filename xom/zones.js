@@ -1,5 +1,7 @@
 exports = module.exports = function() {
-  return {};
+  var Zones = require('../lib/zones');
+  
+  return new Zones();
 }
 
 exports['@singleton'] = true;
