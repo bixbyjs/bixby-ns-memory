@@ -1,13 +1,18 @@
 {
   "name": "bixby-ns-memory",
   "version": "0.0.0",
-  "description": "In-memory naming system components for Bixby.js.",
+  "description": "In-memory naming services for Bixby.js.",
+  "keywords": [
+    "ns",
+    "dns"
+  ],
   "author": {
     "name": "Jared Hanson",
     "email": "jaredhanson@gmail.com",
     "url": "http://www.jaredhanson.net/"
   },
-  "repository": {    "type": "git",
+  "repository": {
+    "type": "git",
     "url": "git://github.com/bixbyjs/bixby-ns-memory.git"
   },
   "bugs": {
